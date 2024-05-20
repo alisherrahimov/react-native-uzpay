@@ -6,16 +6,35 @@ click and payme
 
 ```sh
 npm install react-native-uzpay
+yarn add react-native-uzpay
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-uzpay';
+import { UzPay } from 'react-native-uzpay';
 
 // ...
 
-const result = await multiply(3, 7);
+const Payment = ()=>{
+    return(
+        <UzPay
+        amount = {1000} // so'm
+        type = "click" // click yoki payme
+        params = {{
+            //  payme
+            merchantId: '',
+            merchantUserId: ''
+            //  payme
+
+            //  click
+            merchantId: '',
+            serviceId: '',
+            transactionParam: '',
+            //  click
+        }} />
+    )
+}
 ```
 
 ## Contributing
